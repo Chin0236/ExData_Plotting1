@@ -6,5 +6,7 @@ c=apply(b[3],2,as.numeric)
 d=apply(b[1],2,as.Date)
 for (i in 1:length(d)){
 d[i]=format(as.Date(b[i,1],format="%Y-%m-%d"),"%a")  }
-plot(c,xlab=" ",ylab="Global Active Power (kilowatts)",type="l")
+plot(c,xlab=" ",ylab="Global Active Power (kilowatts)",type="l",xaxt="n")
+axis(1, at = c(1, 1441, 2880), labels = c("Thu", "Fri", "Sat"))
+
 
